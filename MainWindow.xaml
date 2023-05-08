@@ -14,10 +14,10 @@
     </Window.Background>
     <Grid>
         <MediaElement x:Name="MedShow" Margin="32,39,41,82"/>
-        <Button x:Name="btnPlay" Content="開始" HorizontalAlignment="Left" Height="39" Margin="35,365,0,0" VerticalAlignment="Top" Width="92" Background="#FF73DF7B"/>
-        <Button x:Name="btnPause" Content="暫停" HorizontalAlignment="Left" Height="39" Margin="147,365,0,0" VerticalAlignment="Top" Width="92" Background="#FF5DD2E7"/>
-        <Button x:Name="btnStop" Content="停止" HorizontalAlignment="Left" Height="39" Margin="256,365,0,0" VerticalAlignment="Top" Width="92" Background="#FFCE2E3D"/>
-        <Button x:Name="btnExit" Content="離開" HorizontalAlignment="Left" Height="39" Margin="365,365,0,0" VerticalAlignment="Top" Width="92">
+        <Button x:Name="btnPlay" Content="開始" HorizontalAlignment="Left" Height="39" Margin="35,365,0,0" VerticalAlignment="Top" Width="92" Background="#FF73DF7B" Click="btnPlay_Click"/>
+        <Button x:Name="btnPause" Content="暫停" HorizontalAlignment="Left" Height="39" Margin="147,365,0,0" VerticalAlignment="Top" Width="92" Background="#FF5DD2E7" Click="btnPause_Click"/>
+        <Button x:Name="btnStop" Content="停止" HorizontalAlignment="Left" Height="39" Margin="256,365,0,0" VerticalAlignment="Top" Width="92" Background="#FFCE2E3D" Click="btnStop_Click"/>
+        <Button x:Name="btnExit" Content="離開" HorizontalAlignment="Left" Height="39" Margin="365,365,0,0" VerticalAlignment="Top" Width="92" Click="btnExit_Click">
             <Button.Background>
                 <LinearGradientBrush EndPoint="0.5,1" StartPoint="0.5,0">
                     <GradientStop Color="Black"/>
