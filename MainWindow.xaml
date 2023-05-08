@@ -26,6 +26,6 @@
             </Button.Background>
         </Button>
         <TextBox x:Name="txtFilePath" HorizontalAlignment="Left" Margin="35,17,0,0" TextWrapping="Wrap" VerticalAlignment="Top" Width="544"/>
-        <Button x:Name="btnOpenFile" Content="開啟檔案" HorizontalAlignment="Left" Height="17" Margin="584,17,0,0" VerticalAlignment="Top" Width="59" Background="#FF98C1C5"/>
+        <Button x:Name="btnOpenFile" Content="開啟檔案" HorizontalAlignment="Left" Height="17" Margin="584,17,0,0" VerticalAlignment="Top" Width="59" Background="#FF98C1C5" Click="btnOpenFile_Click"/>
     </Grid>
 </Window>
