@@ -6,7 +6,26 @@
         xmlns:local="clr-namespace:MediaPlayer"
         mc:Ignorable="d"
         Title="MainWindow" Height="450" Width="800">
+    <Window.Background>
+        <LinearGradientBrush EndPoint="0.5,1" StartPoint="0.5,0">
+            <GradientStop Color="Black" Offset="1"/>
+            <GradientStop Color="#FF36548D" Offset="0"/>
+        </LinearGradientBrush>
+    </Window.Background>
     <Grid>
-        
+        <MediaElement x:Name="MedShow" Margin="32,39,41,82"/>
+        <Button x:Name="btnPlay" Content="開始" HorizontalAlignment="Left" Height="39" Margin="35,365,0,0" VerticalAlignment="Top" Width="92" Background="#FF73DF7B"/>
+        <Button x:Name="btnPause" Content="暫停" HorizontalAlignment="Left" Height="39" Margin="147,365,0,0" VerticalAlignment="Top" Width="92" Background="#FF5DD2E7"/>
+        <Button x:Name="btnStop" Content="停止" HorizontalAlignment="Left" Height="39" Margin="256,365,0,0" VerticalAlignment="Top" Width="92" Background="#FFCE2E3D"/>
+        <Button x:Name="btnExit" Content="離開" HorizontalAlignment="Left" Height="39" Margin="365,365,0,0" VerticalAlignment="Top" Width="92">
+            <Button.Background>
+                <LinearGradientBrush EndPoint="0.5,1" StartPoint="0.5,0">
+                    <GradientStop Color="Black"/>
+                    <GradientStop Color="#FFF2E5E5" Offset="1"/>
+                </LinearGradientBrush>
+            </Button.Background>
+        </Button>
+        <TextBox x:Name="txtFilePath" HorizontalAlignment="Left" Margin="35,17,0,0" TextWrapping="Wrap" VerticalAlignment="Top" Width="544"/>
+        <Button x:Name="btnOpenFile" Content="開啟檔案" HorizontalAlignment="Left" Height="17" Margin="584,17,0,0" VerticalAlignment="Top" Width="59" Background="#FF98C1C5"/>
     </Grid>
 </Window>
