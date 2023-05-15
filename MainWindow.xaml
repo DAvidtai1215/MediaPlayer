@@ -5,7 +5,7 @@
         xmlns:mc="http://schemas.openxmlformats.org/markup-compatibility/2006"
         xmlns:local="clr-namespace:MediaPlayer"
         mc:Ignorable="d"
-        Title="MainWindow" Height="524" Width="843">
+        Title="MainWindow" Height="554" Width="818">
     <Window.Background>
         <LinearGradientBrush EndPoint="0.5,1" StartPoint="0.5,0">
             <GradientStop Color="Black" Offset="1"/>
@@ -13,11 +13,15 @@
         </LinearGradientBrush>
     </Window.Background>
     <Grid Margin="0,0,0,-5">
-        <MediaElement x:Name="MedShow" Margin="32,39,41,92" MediaOpened="MedShow_MediaOpened"/>
-        <Button x:Name="btnPlay" Content="開始" HorizontalAlignment="Left" Height="39" Margin="35,380,0,0" VerticalAlignment="Top" Width="92" Background="#FF73DF7B" Click="btnPlay_Click"/>
-        <Button x:Name="btnPause" Content="暫停" HorizontalAlignment="Left" Height="39" Margin="148,380,0,0" VerticalAlignment="Top" Width="92" Background="#FF5DD2E7" Click="btnPause_Click"/>
-        <Button x:Name="btnStop" Content="停止" HorizontalAlignment="Left" Height="39" Margin="268,380,0,0" VerticalAlignment="Top" Width="92" Background="#FFCE2E3D" Click="btnStop_Click"/>
-        <Button x:Name="btnExit" Content="離開" HorizontalAlignment="Left" Height="39" Margin="382,380,0,0" VerticalAlignment="Top" Width="92" Click="btnExit_Click">
+        <Grid.ColumnDefinitions>
+            <ColumnDefinition Width="721*"/>
+            <ColumnDefinition Width="123*"/>
+        </Grid.ColumnDefinitions>
+        <MediaElement x:Name="MedShow" Margin="32,39,41,157" MediaOpened="MedShow_MediaOpened" Grid.ColumnSpan="2"/>
+        <Button x:Name="btnPlay" Content="開始" HorizontalAlignment="Left" Height="40" Margin="36,414,0,0" VerticalAlignment="Top" Width="92" Background="#FF73DF7B" Click="btnPlay_Click"/>
+        <Button x:Name="btnPause" Content="暫停" HorizontalAlignment="Left" Height="39" Margin="148,415,0,0" VerticalAlignment="Top" Width="92" Background="#FF5DD2E7" Click="btnPause_Click"/>
+        <Button x:Name="btnStop" Content="停止" HorizontalAlignment="Left" Height="39" Margin="261,415,0,0" VerticalAlignment="Top" Width="92" Background="#FFCE2E3D" Click="btnStop_Click"/>
+        <Button x:Name="btnExit" Content="離開" HorizontalAlignment="Left" Height="39" Margin="376,414,0,0" VerticalAlignment="Top" Width="92" Click="btnExit_Click">
             <Button.Background>
                 <LinearGradientBrush EndPoint="0.5,1" StartPoint="0.5,0">
                     <GradientStop Color="Black"/>
@@ -25,9 +29,9 @@
                 </LinearGradientBrush>
             </Button.Background>
         </Button>
-        <TextBox x:Name="txtFilePath" HorizontalAlignment="Left" Margin="35,17,0,0" TextWrapping="Wrap" VerticalAlignment="Top" Width="544"/>
+        <TextBox x:Name="txtFilePath" HorizontalAlignment="Left" Margin="35,17,0,0" TextWrapping="Wrap" VerticalAlignment="Top" Width="544" Height="17"/>
         <Button x:Name="btnOpenFile" Content="開啟檔案" HorizontalAlignment="Left" Height="17" Margin="584,17,0,0" VerticalAlignment="Top" Width="59" Background="#FF98C1C5" Click="btnOpenFile_Click"/>
-        <Slider x:Name="sliVolume" HorizontalAlignment="Left" Margin="504,393,0,0" VerticalAlignment="Top" Width="120" LargeChange="0.05" Maximum="1" TickFrequency="0.01" ValueChanged="sliVolume_ValueChanged" RenderTransformOrigin="0.5,0.5">
+        <Slider x:Name="sliVolume" HorizontalAlignment="Left" Margin="504,427,0,0" VerticalAlignment="Top" Width="120" LargeChange="0.05" Maximum="1" TickFrequency="0.01" ValueChanged="sliVolume_ValueChanged" RenderTransformOrigin="0.5,0.5" Height="18">
             <Slider.RenderTransform>
                 <TransformGroup>
                     <ScaleTransform/>
@@ -37,6 +41,7 @@
                 </TransformGroup>
             </Slider.RenderTransform>
         </Slider>
-        <Slider x:Name="sliProgress" Margin="35,352,45,60"/>
+        <Slider x:Name="sliProgress" Margin="36,369,45,90" Grid.ColumnSpan="2"/>
+        <TextBox x:Name="txtTime" HorizontalAlignment="Left" Height="38" Margin="35,466,0,0" TextWrapping="Wrap" Text="&#xD;&#xA;" VerticalAlignment="Top" Width="159"/>
     </Grid>
 </Window>

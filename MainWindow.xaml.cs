@@ -89,6 +89,7 @@ namespace MediaPlayer
         {
             // 小程序，更新目前影片播放進度
             sliProgress.Value = MedShow.Position.TotalMilliseconds;
+            txtTime.Text = MedShow.Position.ToString("h'h 'm'm 's's'");
         }
         private void MedShow_MediaOpened(object sender, RoutedEventArgs e)
         {
@@ -104,5 +105,7 @@ namespace MediaPlayer
             timer.Tick += new EventHandler(timer_tick); //每一個時間刻度設定一個小程序timer_tick
             timer.Start(); // 啟動這個計時器
         }
+
+        
     }
 }
